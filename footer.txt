@@ -1,0 +1,153 @@
+ <!-- Footer Section -->
+    <footer class="footer">
+        <!-- Logo Section -->
+        <div class="logo">
+            CH. <span>Waseem</span>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <h3>Follow Me</h3>
+            <ul>
+                <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+                <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+                <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+                <li><a href="#"><i class="bx bxl-linkedin"></i></a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h3>Contact Info</h3>
+            <p><strong>Email:</strong> <a href="mailto:example@example.com">example@example.com</a></p>
+            <p><strong>Phone:</strong> +123 456 7890</p>
+            <p><strong>Address:</strong> Your City, Country</p>
+        </div>
+    </footer>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 CH. Waseem. All rights reserved.</p>
+    </div>
+
+
+
+
+
+
+       /* Footer Styles */
+        .footer {
+            background-color: #131313;
+            color: #f0f0f0;
+            padding: 2rem 5%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+        }
+
+        .footer .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #009721;
+        }
+
+        .footer .logo span {
+            color: #f0f0f0;
+        }
+
+        .footer .quick-links,
+        .footer .social-media,
+        .footer .contact-info {
+            flex: 1 1 250px;
+            margin: 1rem;
+        }
+
+        .footer .quick-links h3,
+        .footer .social-media h3,
+        .footer .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #009721;
+        }
+
+        .footer .quick-links ul,
+        .footer .social-media ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer .quick-links ul li,
+        .footer .social-media ul li {
+            margin: 0.5rem 0;
+        }
+
+        .footer .quick-links ul li a,
+        .footer .social-media ul li a {
+            color: #f0f0f0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer .quick-links ul li a:hover,
+        .footer .social-media ul li a:hover {
+            color: #009721;
+        }
+
+        .footer .social-media ul li {
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+        .footer .social-media ul li a i {
+            font-size: 1.5rem;
+        }
+
+        .footer .contact-info p {
+            margin: 0.5rem 0;
+        }
+
+        .footer .contact-info a {
+            color: #f0f0f0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer .contact-info a:hover {
+            color: #009721;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .footer {
+                text-align: center;
+                flex-direction: column;
+            }
+
+            .footer .quick-links,
+            .footer .social-media,
+            .footer .contact-info {
+                flex: 1 1 100%;
+                margin: 1rem 0;
+            }
+        }

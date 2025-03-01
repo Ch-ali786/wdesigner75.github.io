@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Waseem, a creative graphic designer and web developer.">
+<meta name="keywords" content="Graphic Designer, Web Developer, Portfolio, Waseem">
+
+    <title>Home - W Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+
+</head>
+<body>
+    <header class="header">
+       <div href="index.html" class="logo">CH. <span>Waseem</span></div>
+
+
+
+        <nav class="navbar">
+            <ul class="nav-items">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/portfolio.html">Portfolio</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li>
+                <div class="switch" id="theme-toggle">
+                  <div class="switchcircle">
+                    <ion-icon name="sunny-outline"></ion-icon>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="hamburger" id="hamburger-menu">
+                <ion-icon name="menu-outline"></ion-icon>
+              </div>
+        </nav>
+    </header>
+
+
+<style>
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none; /* Hidden by default on large screens */
+  font-size: 3rem;
+  color: var(--text-color);
+  cursor: pointer;
+  z-index: 10; /* Ensure it stays on top */
+}
+
+.hamburger ion-icon {
+  color: var(--text-color);
+  transition: 0.3s ease;
+}
+
+.hamburger:hover ion-icon {
+  color: var(--main-color);
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    display: none; /* Hidden by default on small screens */
+    flex-direction: column; /* Vertical layout for menu items */
+    position: absolute;
+    top: 100%; /* Below the header */
+    right: 0;
+    background: var(--second-bg-color);
+    width: 200px;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    gap: 1rem; /* Adjust spacing between items */
+  }
+
+  .navbar.active {
+    display: flex; /* Show menu when active class is added */
+  }
+
+  .nav-items a {
+    font-size: 1.6rem; /* Slightly smaller font for mobile */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger menu on small screens */
+  }
+}
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+<script>
+
+
+
+// Select the hamburger menu and navbar
+const hamburgerMenu = document.getElementById("hamburger-menu");
+const navMenu = document.getElementById("nav-menu");
+
+// Add click event listener to the hamburger menu
+hamburgerMenu.addEventListener("click", () => {
+  navMenu.classList.toggle("active"); // Toggle the "active" class on the menu
+});
+
+// Optional: Close the menu when a link is clicked
+const navLinks = document.querySelectorAll(".navbar a");
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active"); // Close the menu
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Select the toggle button and circle
+const themeToggle = document.getElementById("theme-toggle");
+const switchCircle = themeToggle.querySelector(".switchcircle");
+const icon = switchCircle.querySelector("ion-icon"); // Select the icon inside the circle
+
+// Add event listener to toggle light and dark mode
+themeToggle.addEventListener("click", () => {
+  const isDarkMode = document.body.classList.contains("dark-mode");
+
+  if (isDarkMode) {
+    // Switch to Light Mode
+    document.body.classList.remove("dark-mode"); // Remove dark mode class
+    switchCircle.classList.remove("on"); // Move switch circle back
+    icon.setAttribute("name", "sunny-outline"); // Change icon to Sun
+  } else {
+    // Switch to Dark Mode
+    document.body.classList.add("dark-mode"); // Add dark mode class
+    switchCircle.classList.add("on"); // Move switch circle forward
+    icon.setAttribute("name", "moon-outline"); // Change icon to Moon
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- Loader (Appears on page load) -->
+   <div class="loader" id="loader">
+    <div class="dot-container">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</div>
+
+<script>
+    // Hide loader after 2 seconds and add a fade-out effect
+    window.addEventListener("load", function() {
+        setTimeout(function() {
+            document.getElementById("loader").style.opacity = "0"; // Fade out loader
+        }, 2000); // 2 seconds
+        setTimeout(function() {
+            document.getElementById("loader").style.display = "none"; // Hide loader after fade out
+        }, 2500); // Wait for fade-out transition to complete
+    });
+</script>
+
+<section class="home" id="home">
+    <div class="home-content">
+        <h1>Hi, It's <span>Waseem</span></h1>
+        <h3 class="text-animation">I will do <span></span></h3>
+        <p>Hi there! I create unique and eye-catching designs to  <br>
+            stand out. From logos to social media posts, I make designs <br>
+            that attract attention and leave a lasting impression.  <br>
+            Let’s work together to bring your ideas to life!.</p>
+        <div class="social-icons">
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+        </div>
+
+        <div class="btn-group">
+            <a href="#" class="btn">Hire</a>
+            <a href="#contact" class="btn">Contact</a>
+        </div>
+        <div class="home-img">
+            <img src="img/4wdesigner.png" alt="home-image">
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- About Section -->
+<section class="about">
+    <div class="about-container">
+      <!-- Profile Image -->
+      <div class="about-image">
+        <img
+          src="img/4wdesigner.png"
+          alt="Waseem - Graphic Designer"
+          loading="lazy"
+          width="300"
+          height="300"
+        />
+      </div>
+  
+      <!-- Text Content -->
+      <div class="about-content">
+        <h1>About Me</h1>
+        <p>
+          Hi, I'm <strong>Waseem</strong>, also known as <strong>"W Designer"</strong>. I am passionate about crafting visually stunning and impactful designs. With expertise in
+          <span class="highlight">graphic design</span>, <span class="highlight">web development</span>, and <span class="highlight">UI/UX design</span>, I help bring your creative ideas to life.
+        </p>
+        <p>
+          My approach combines creativity, precision, and a touch of innovation, ensuring every project delivers a memorable experience.
+        </p>
+        <a href="portfolio.html" class="btn" aria-label="View My Portfolio">View My Work</a>
+      </div>
+    </div>
+  </section>
+  
+
+  
+  
+
+
+
+
+<!-- Skills Section -->
+<section class="skills">
+  <h2>My Skills</h2>
+  <div class="skills-grid">
+      <div class="skill">
+          <h3>Graphic Design</h3>
+          <div class="progress-bar">
+              <div class="progress" style="width: 80%; background-color: rgba(0, 104, 12, 0.8);"></div>
+          </div>
+      </div>
+      <div class="skill">
+          <h3>Web Development</h3>
+          <div class="progress-bar">
+              <div class="progress" style="width: 55%; background-color: rgba(0, 104, 12, 0.8);"></div>
+          </div>
+      </div>
+      <div class="skill">
+          <h3>UI/UX Design</h3>
+          <div class="progress-bar">
+              <div class="progress" style="width: 40%; background-color: rgba(0, 104, 12, 0.8);"></div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="why-choose-me" id="why-choose-me">
+    <h2>Why Work with Me?</h2>
+    <div class="benefits-container">
+        <div class="benefit">
+            <i class="bx bx-time"></i>
+            <h3>Timely Delivery</h3>
+            <p>Projects delivered on time without compromising quality.</p>
+        </div>
+        <div class="benefit">
+            <i class="bx bxs-paint"></i>
+            <h3>Creative Designs</h3>
+            <p>Unique and eye-catching designs that make your brand stand out.</p>
+        </div>
+        <div class="benefit">
+            <i class="bx bx-money"></i>
+            <h3>Affordable Rates</h3>
+            <p>Professional designs at competitive prices to fit your budget.</p>
+        </div>
+        <div class="benefit">
+            <i class="bx bx-like"></i>
+            <h3>100% Satisfaction</h3>
+            <p>Dedicated to ensuring you love the final product.</p>
+        </div>
+    </div>
+</section>
+
+<section class="featured-projects" id="projects">
+    <h2>Featured Projects</h2>
+    <div class="projects-container">
+        <div class="project">
+            <div class="project-image">
+                <img src="img/project1.png" alt="Project 1">
+            </div>
+            <h3>Brand Identity Design</h3>
+            <p>Developed a cohesive brand identity for a leading startup, including logo, business cards, and more.</p>
+        </div>
+        <div class="project">
+            <div class="project-image">
+                <img src="img/project2.png" alt="Project 2">
+            </div>
+            <h3>Website Redesign</h3>
+            <p>Enhanced user engagement by redesigning the user interface of a corporate website.</p>
+        </div>
+        <div class="project">
+            <div class="project-image">
+                <img src="img/project3.png" alt="Project 3">
+            </div>
+            <h3>Mobile App UI</h3>
+            <p>Designed an intuitive and user-friendly interface for a mobile productivity app.</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<footer class="footer">
+    <div class="logo">
+        CH. <span>Waseem</span>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 CH. Waseem. All rights reserved. | Designed by <span class="highlight">W Designer</span></p>
+    </div>
+</footer>

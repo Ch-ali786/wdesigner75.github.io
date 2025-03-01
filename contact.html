@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="contact.css">
+  <title>Contact Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">CH. <span>Waseem</span></a>
+
+
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/services.html">Services</a>
+            <a href="/portfolio.html">Portfolio</a>
+            <a href="/contact.html" class="active" >Contact</a>
+        </nav>
+    </header>
+
+    <div class="contact">
+      <h2 class="cont">Contact Us</h2>
+      <p class="para">We would love to hear from you! Reach out to us using the form or contact info below.</p>
+  
+      <!-- Contact Info -->
+      <div class="contact-info">
+          <h3>Contact Information</h3>
+          <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <p>+1 123 456 7890</p>
+          </div>
+          <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <p>info@example.com</p>
+          </div>
+          <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>123 Main Street, City, Country</p>
+          </div>
+      </div>
+  
+      <!-- Contact Form -->
+
+
+
+
+
+
+      <form id="contactForm" action="https://script.google.com/macros/s/AKfycbzg5lgd0hGog2FQyR-I9IvPfUnBRHdN7IlDHezHqIpgE7pehH32hsd6LbCGxpeSxAKpvQ/exec" method="POST">
+        <input type="text" name="Your Name" placeholder="Your Name" required />
+        <input type="email" name=" Email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+    
+
+
+
+
+
+    
+     <!-- <form id="contactForm">
+
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send</button>
+      </form>-->
+
+  </div>
+  
+  <!-- Font Awesome Icons -->
+  <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+  />
+  
+    
+
+
+
+
+
+
+      <!--Contact Information (optional) 
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="bx bx-envelope"></i>
+          <p>Email: example@example.com</p>
+        </div>
+        <div class="contact-item">
+          <i class="bx bx-phone"></i>
+          <p>Phone: +123 456 7890</p>
+        </div>
+        <div class="contact-item">
+          <i class="bx bx-map"></i>
+          <p>Address: Your City, Country</p>
+        </div>
+      </div>
+    </div>
+  </section>--->
+  
+
+     
+     <!-- <form id="contactForm">
+        <input type="text" name="name" required>
+        <input type="email" name="email" required>
+        <textarea name="message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>-->
+      
+
+
+
+
+
+      <script>
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Form refresh na kare
+
+    const formData = new FormData(this);
+
+    // FormData ko console mein dekhne ke liye
+    for (let [key, value] of formData.entries()) {
+        console.log(`${key}: ${value}`); // Console pe check karen
+    }
+
+    // Fetch request
+    fetch('https://script.google.com/macros/s/AKfycbxd-rz8aEfM-XP3ZC0G69CATr_vxzu1mw-Oj6b1b0ZYaLvuokHu-GfUcUf0OXZVJUaxIw/exec', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(formData)
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log(data); // Response check karen
+    })
+    .catch(error => {
+        console.error('Error:', error); // Error log karen
+    });
+});
+
+    </script>
+      
+
+
+ 
+
+  <!-- Boxicons Library for Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+ 
+ 
+  <footer class="footer">
+    <!-- Logo -->
+    <div class="logo">
+        CH. <span>Waseem</span>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="social-media">
+        <ul>
+            <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+            <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+            <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+            <li><a href="#"><i class="bx bxl-linkedin"></i></a></li>
+        </ul>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 CH. Waseem. All rights reserved. | Designed by <span class="highlight">W Designer</span></p>
+    </div>
+</footer>
+
+
+</body>
+</html>

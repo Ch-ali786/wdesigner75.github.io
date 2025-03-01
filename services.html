@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="services.css">
+  <title>Services - W Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">CH. <span>Waseem</span></a>
+
+        <i class="bx bx-menu" id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/services.html" class="active" >Services</a>
+            <a href="/portfolio.html">Portfolio</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+    </header>
+
+
+<!-- Services Section -->
+<section id="services">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">What I Offer</h2>
+    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+      Professional designs tailored to meet your needs.
+    </p>
+
+ <!-- Services Grid -->
+ <div class="services-grid">
+  <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+    <i class="bx bx-palette service-icon"></i>
+    <h3>Graphic Design</h3>
+    <p>Creative and captivating designs to elevate your brand's visual identity.</p>
+    <button class="buy-now">Buy Now</button>
+  </div>
+  <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+    <i class="bx bx-code-alt service-icon"></i>
+    <h3>Web Development</h3>
+    <p>Custom-built, responsive websites tailored to your business needs.</p>
+    <button class="buy-now">Buy Now</button>
+  </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+        <i class="bx bx-palette service-icon"></i>
+        <h3>UI/UX Design</h3>
+        <p>Intuitive and visually appealing user interfaces for optimal user experience.</p>
+        <button class="buy-now">Buy Now</button>
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+ 
+
+
+
+
+
+
+
+ </div>
+</section>
+
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+
+<!-- AOS Initialization Script -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<!-- Buy Now Button Script -->
+<script>
+  const serviceCards = document.querySelectorAll('.service-card');
+
+  serviceCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const buyNowButton = card.querySelector('.buy-now');
+      const isVisible = buyNowButton.style.display === 'block';
+
+      // Toggle button visibility
+      if (isVisible) {
+        buyNowButton.style.opacity = '0'; // Fade-out effect
+        setTimeout(() => {
+          buyNowButton.style.display = 'none'; // Hide after fade-out
+        }, 500);
+      } else {
+        buyNowButton.style.display = 'block'; // Show the button
+        buyNowButton.style.opacity = '0'; // Start with opacity 0
+        setTimeout(() => {
+          buyNowButton.style.opacity = '1'; // Fade-in
+        }, 0);
+      }
+    });
+  });
+</script>
+ 
+
+
+
+
+
+
+
+
+
+ <!-- Boxicons Library for Icons -->
+ <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+ 
+ 
+ <footer class="footer">
+   <!-- Logo -->
+   <div class="logo">
+       CH. <span>Waseem</span>
+   </div>
+
+   <!-- Social Media Links -->
+   <div class="social-media">
+       <ul>
+           <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+           <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+           <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+           <li><a href="#"><i class="bx bxl-linkedin"></i></a></li>
+       </ul>
+   </div>
+
+   <!-- Footer Bottom -->
+   <div class="footer-bottom">
+       <p>&copy; 2025 CH. Waseem. All rights reserved. | Designed by <span class="highlight">W Designer</span></p>
+   </div>
+</footer>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #080808;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Utility Classes */
+.highlight {
+  color: #009721;
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: #080808;
+  --second-bg-color: #131313;
+  --text-color: white;
+  --main-color: #009721;
+}
+
+html {
+  font-size: 60%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 8%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+}
+
+.header::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  margin: 0; /* Ensure no extra spacing */
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.logo span {
+  text-shadow: 0 0 15px var(--main-color);
+}
+
+.navbar {
+  display: flex;
+  gap: 2rem; /* Maintain proper spacing without excess margins */
+  margin-bottom: 0; /* Remove extra bottom margin */
+}
+
+.navbar a {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+}
+
+#menu-icon {
+  font-size: 3.2rem;
+  color: var(--main-color);
+  display: none;
+}
+
+  
+  /* About Section */
+  .about {
+    padding: 16rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #131313, #080808);
+  }
+  
+  .about-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .about-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #262626;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .about-image img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #262626,
+                0 0 55px #262626;
+  }
+
+  .about-content h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+  
+  .about-content .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #b1ffbd;
+    background: #01430f;
+    border-radius: 25px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .about-content .btn:hover {
+    background: #00ff00;
+    transform: scale(1.05);
+  }
+  
+/* Skills Section */
+.skills {
+    padding: 2rem 5%;
+    text-align: center;
+    background-color: #080808; /* Consistent theme */
+  }
+  
+  .skills h2 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #009721;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .skill {
+    background: #131313;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .skill h3 {
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    background: #222;
+    height: 8px; /* Slightly larger for better visibility */
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .progress {
+    height: 8px;
+    background: linear-gradient(90deg, #00ff87, #009721);
+    width: 0%; /* Default width */
+    border-radius: 5px;
+    transition: width 0.8s ease; /* Smooth animation */
+  }
+  
+  .progress-text {
+    font-size: 1.2rem;
+    color: #fff;
+    position: absolute;
+    right: 10px;
+    top: -25px;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .about-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .about-content h1 {
+      font-size: 3rem;
+    }
+  
+    .about-content p {
+      font-size: 1.3rem;
+    }
+  
+    .skills-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .about-image img {
+      width: 250px;
+      height: 250px;
+    }
+  
+    .about-content h1 {
+      font-size: 3.5rem;
+    }
+  
+    .about-content p {
+      font-size: 1.4rem;
+    }
+  }
+  
+
+
+
+  
+
+  
+/* Footer Styles */
+.footer {
+  background-color: #131313;
+  color: #f0f0f0;
+  padding: 1.5rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.footer .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #009721;
+}
+
+.footer .logo span {
+  color: #f0f0f0;
+}
+
+.footer .social-media ul {
+  list-style: none;
+  padding: 0;
+  padding-left: 18rem;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+}
+
+.footer .social-media ul li a {
+  color: #f0f0f0;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer .social-media ul li a:hover {
+  color: #009721;
+}
+
+.footer .footer-bottom {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 1rem;
+}
+
+.footer .footer-bottom p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+      flex-direction: column;
+      gap: 1rem;
+  }
+
+  .footer .social-media ul {
+      justify-content: center;
+  }
+}

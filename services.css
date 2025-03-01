@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #080808;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Utility Classes */
+.highlight {
+  color: #009721;
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: #080808; /* Primary dark background */
+  --second-bg-color: #131313; /* Secondary dark background for sections */
+  --text-color: white; /* Text color for readability */
+  --main-color: #009721; /* Accent color for buttons and highlights */
+  --secondary-accent-color: #D4AF37; /* Gold for secondary accents and highlights */
+  --hover-color: #007d1a; /* Slightly darker green for hover effects */
+  --divider-color: #1E1E1E; /* Subtle divider color for sections */
+}
+
+html {
+  font-size: 60%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 8%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+}
+
+.header::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  margin: 0; /* Ensure no extra spacing */
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.logo span {
+  text-shadow: 0 0 15px var(--main-color);
+}
+
+.navbar {
+  display: flex;
+  gap: 2rem; /* Maintain proper spacing without excess margins */
+  margin-bottom: 0; /* Remove extra bottom margin */
+}
+
+.navbar a {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+}
+
+#menu-icon {
+  font-size: 3.2rem;
+  color: var(--main-color);
+  display: none;
+}
+
+  
+ 
+
+
+.services-grid {
+  top: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 100px;
+}
+
+.service-card {
+  flex: 1 1 calc(300px - 2rem);
+  max-width: 300px;
+  background: linear-gradient(135deg, #00310b,  #1b1b1b);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+  font-size: 50px;
+  color: #009721;
+  margin-bottom: 10px;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  margin: 15px 0 10px;
+  color:var(--text-color);
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+}
+
+.buy-now {
+  background-color: var(--main-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-now:hover {
+  background-color:var(--hover-color);
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    flex: 1 1 calc(100% - 2rem);
+    max-width: 100%;
+  }
+}
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+/* Footer Styles */
+.footer {
+  background-color: #131313;
+  color: #f0f0f0;
+  padding: 1.5rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.footer .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #009721;
+}
+
+.footer .logo span {
+  color: #f0f0f0;
+}
+
+.footer .social-media ul {
+  list-style: none;
+  padding: 0;
+  padding-left: 18rem;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+}
+
+.footer .social-media ul li a {
+  color: #f0f0f0;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer .social-media ul li a:hover {
+  color: #009721;
+}
+
+.footer .footer-bottom {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 1rem;
+}
+
+.footer .footer-bottom p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+      flex-direction: column;
+      gap: 1rem;
+  }
+
+  .footer .social-media ul {
+      justify-content: center;
+  }
+}
